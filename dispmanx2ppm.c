@@ -15,16 +15,15 @@ int main(void)
     DISPMANX_DISPLAY_HANDLE_T   display;
     DISPMANX_MODEINFO_T         info;
     DISPMANX_RESOURCE_HANDLE_T  resource;
-    VC_IMAGE_TYPE_T type = VC_IMAGE_RGB888;
-    VC_IMAGE_TRANSFORM_T	transform = 0;
-    VC_RECT_T			rect;
+    VC_IMAGE_TYPE_T             type = VC_IMAGE_RGB888;
+    VC_IMAGE_TRANSFORM_T        transform = 0;
+    VC_RECT_T                   rect;
 
-    void                       *image;
-    uint32_t                    vc_image_ptr;
+    void     *image;
+    uint32_t vc_image_ptr;
 
-    int             		ret;
-
-    uint32_t        screen = 0;
+    int      ret;
+    uint32_t screen = 0;
 
     bcm_host_init();
 
@@ -39,10 +38,7 @@ int main(void)
 
     assert(image);
 
-    resource = vc_dispmanx_resource_create( type,
-                                                  info.width,
-                                                  info.height,
-                                                  &vc_image_ptr );
+    resource = vc_dispmanx_resource_create( type, info.width, info.height, &vc_image_ptr );
 
     vc_dispmanx_snapshot(display, resource, transform);
 
