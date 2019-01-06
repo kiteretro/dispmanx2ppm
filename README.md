@@ -1,6 +1,6 @@
-# dispmanx2ppm
-This will write the output of display 0 into ```out.ppm```.
-This is compatible with Raspberry Pi ONLY due to using the broadcom GPU for snapshotting.
+# Display Manager X to .ppm
+This will convert the output of display 0 to ```out.ppm```.
+This software works with Raspberry Pi products as they use Broadcom's GPU for snapshotting.
 
 ## Building
 Building is as simple as:
